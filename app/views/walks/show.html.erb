@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dog:</strong>
+  <%= @walk.dog_id %>
+</p>
+
+<p>
+  <strong>Walker:</strong>
+  <%= @walk.walker_id %>
+</p>
+
+<p>
+  <strong>Complete:</strong>
+  <%= @walk.complete %>
+</p>
+
+<%= link_to 'Edit', edit_walk_path(@walk) %> |
+<%= link_to 'Back', walks_path %>

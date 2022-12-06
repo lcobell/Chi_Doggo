@@ -1,0 +1,81 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dogs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size</th>
+      <th>About</th>
+      <th>Image</th>
+      <th>Owner</th>
+      <th>Sunday morning</th>
+      <th>Sunday afternoon</th>
+      <th>Sunday night</th>
+      <th>Monday morning</th>
+      <th>Monday afternoon</th>
+      <th>Monday night</th>
+      <th>Tuesday morning</th>
+      <th>Tuesday afternoon</th>
+      <th>Tuesday night</th>
+      <th>Wednesday morning</th>
+      <th>Wednesday afternoon</th>
+      <th>Wednesday night</th>
+      <th>Thursday morning</th>
+      <th>Thursday afternoon</th>
+      <th>Thursday night</th>
+      <th>Friday morning</th>
+      <th>Friday afternoon</th>
+      <th>Friday night</th>
+      <th>Saturday morning</th>
+      <th>Saturday afternoon</th>
+      <th>Saturday night</th>
+      <th>Neighborhood</th>
+      <th>Walks count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dogs.each do |dog| %>
+      <tr>
+        <td><%= dog.name %></td>
+        <td><%= dog.size %></td>
+        <td><%= dog.about %></td>
+        <td><%= dog.image %></td>
+        <td><%= dog.owner_id %></td>
+        <td><%= dog.sunday_morning %></td>
+        <td><%= dog.sunday_afternoon %></td>
+        <td><%= dog.sunday_night %></td>
+        <td><%= dog.monday_morning %></td>
+        <td><%= dog.monday_afternoon %></td>
+        <td><%= dog.monday_night %></td>
+        <td><%= dog.tuesday_morning %></td>
+        <td><%= dog.tuesday_afternoon %></td>
+        <td><%= dog.tuesday_night %></td>
+        <td><%= dog.wednesday_morning %></td>
+        <td><%= dog.wednesday_afternoon %></td>
+        <td><%= dog.wednesday_night %></td>
+        <td><%= dog.thursday_morning %></td>
+        <td><%= dog.thursday_afternoon %></td>
+        <td><%= dog.thursday_night %></td>
+        <td><%= dog.friday_morning %></td>
+        <td><%= dog.friday_afternoon %></td>
+        <td><%= dog.friday_night %></td>
+        <td><%= dog.saturday_morning %></td>
+        <td><%= dog.saturday_afternoon %></td>
+        <td><%= dog.saturday_night %></td>
+        <td><%= dog.neighborhood %></td>
+        <td><%= dog.walks_count %></td>
+        <td><%= link_to 'Show', dog %></td>
+        <td><%= link_to 'Edit', edit_dog_path(dog) %></td>
+        <td><%= link_to 'Destroy', dog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dog', new_dog_path %>

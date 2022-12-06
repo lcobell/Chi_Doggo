@@ -1,0 +1,157 @@
+<%= form_with(model: dog) do |form| %>
+  <% if dog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dog.errors.count, "error") %> prohibited this dog from being saved:</h2>
+
+      <ul>
+        <% dog.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.text_field :size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :about %>
+    <%= form.text_area :about %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :owner_id %>
+    <%= form.text_field :owner_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sunday_morning %>
+    <%= form.check_box :sunday_morning %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sunday_afternoon %>
+    <%= form.check_box :sunday_afternoon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sunday_night %>
+    <%= form.check_box :sunday_night %>
+  </div>
+
+  <div class="field">
+    <%= form.label :monday_morning %>
+    <%= form.check_box :monday_morning %>
+  </div>
+
+  <div class="field">
+    <%= form.label :monday_afternoon %>
+    <%= form.check_box :monday_afternoon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :monday_night %>
+    <%= form.check_box :monday_night %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tuesday_morning %>
+    <%= form.check_box :tuesday_morning %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tuesday_afternoon %>
+    <%= form.check_box :tuesday_afternoon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tuesday_night %>
+    <%= form.check_box :tuesday_night %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wednesday_morning %>
+    <%= form.check_box :wednesday_morning %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wednesday_afternoon %>
+    <%= form.check_box :wednesday_afternoon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wednesday_night %>
+    <%= form.check_box :wednesday_night %>
+  </div>
+
+  <div class="field">
+    <%= form.label :thursday_morning %>
+    <%= form.check_box :thursday_morning %>
+  </div>
+
+  <div class="field">
+    <%= form.label :thursday_afternoon %>
+    <%= form.check_box :thursday_afternoon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :thursday_night %>
+    <%= form.check_box :thursday_night %>
+  </div>
+
+  <div class="field">
+    <%= form.label :friday_morning %>
+    <%= form.check_box :friday_morning %>
+  </div>
+
+  <div class="field">
+    <%= form.label :friday_afternoon %>
+    <%= form.check_box :friday_afternoon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :friday_night %>
+    <%= form.check_box :friday_night %>
+  </div>
+
+  <div class="field">
+    <%= form.label :saturday_morning %>
+    <%= form.check_box :saturday_morning %>
+  </div>
+
+  <div class="field">
+    <%= form.label :saturday_afternoon %>
+    <%= form.check_box :saturday_afternoon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :saturday_night %>
+    <%= form.check_box :saturday_night %>
+  </div>
+
+  <div class="field">
+    <%= form.label :neighborhood %>
+    <%= form.text_field :neighborhood %>
+  </div>
+
+  <div class="field">
+    <%= form.label :walks_count %>
+    <%= form.number_field :walks_count %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

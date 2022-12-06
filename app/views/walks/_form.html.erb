@@ -1,0 +1,32 @@
+<%= form_with(model: walk) do |form| %>
+  <% if walk.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(walk.errors.count, "error") %> prohibited this walk from being saved:</h2>
+
+      <ul>
+        <% walk.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dog_id %>
+    <%= form.text_field :dog_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :walker_id %>
+    <%= form.text_field :walker_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :complete %>
+    <%= form.check_box :complete %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,61 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  size: MyString
+  about: MyText
+  image: MyString
+  owner: one
+  sunday_morning: false
+  sunday_afternoon: false
+  sunday_night: false
+  monday_morning: false
+  monday_afternoon: false
+  monday_night: false
+  tuesday_morning: false
+  tuesday_afternoon: false
+  tuesday_night: false
+  wednesday_morning: false
+  wednesday_afternoon: false
+  wednesday_night: false
+  thursday_morning: false
+  thursday_afternoon: false
+  thursday_night: false
+  friday_morning: false
+  friday_afternoon: false
+  friday_night: false
+  saturday_morning: false
+  saturday_afternoon: false
+  saturday_night: false
+  neighborhood: MyString
+  walks_count: 1
+
+two:
+  name: MyString
+  size: MyString
+  about: MyText
+  image: MyString
+  owner: two
+  sunday_morning: false
+  sunday_afternoon: false
+  sunday_night: false
+  monday_morning: false
+  monday_afternoon: false
+  monday_night: false
+  tuesday_morning: false
+  tuesday_afternoon: false
+  tuesday_night: false
+  wednesday_morning: false
+  wednesday_afternoon: false
+  wednesday_night: false
+  thursday_morning: false
+  thursday_afternoon: false
+  thursday_night: false
+  friday_morning: false
+  friday_afternoon: false
+  friday_night: false
+  saturday_morning: false
+  saturday_afternoon: false
+  saturday_night: false
+  neighborhood: MyString
+  walks_count: 1
