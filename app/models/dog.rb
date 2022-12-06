@@ -3,39 +3,53 @@
 # Table name: dogs
 #
 #  id                  :bigint           not null, primary key
-#  name                :string
-#  size                :string
 #  about               :text
+#  friday_afternoon    :boolean          default(FALSE)
+#  friday_morning      :boolean          default(FALSE)
+#  friday_night        :boolean          default(FALSE)
 #  image               :string
-#  owner_id            :bigint           not null
-#  sunday_morning      :boolean
-#  sunday_afternoon    :boolean
-#  sunday_night        :boolean
-#  monday_morning      :boolean
-#  monday_afternoon    :boolean
-#  monday_night        :boolean
-#  tuesday_morning     :boolean
-#  tuesday_afternoon   :boolean
-#  tuesday_night       :boolean
-#  wednesday_morning   :boolean
-#  wednesday_afternoon :boolean
-#  wednesday_night     :boolean
-#  thursday_morning    :boolean
-#  thursday_afternoon  :boolean
-#  thursday_night      :boolean
-#  friday_morning      :boolean
-#  friday_afternoon    :boolean
-#  friday_night        :boolean
-#  saturday_morning    :boolean
-#  saturday_afternoon  :boolean
-#  saturday_night      :boolean
+#  monday_afternoon    :boolean          default(FALSE)
+#  monday_morning      :boolean          default(FALSE)
+#  monday_night        :boolean          default(FALSE)
+#  name                :string
 #  neighborhood        :string
+#  saturday_afternoon  :boolean          default(FALSE)
+#  saturday_morning    :boolean          default(FALSE)
+#  saturday_night      :boolean          default(FALSE)
+#  size                :string
+#  sunday_afternoon    :boolean          default(FALSE)
+#  sunday_morning      :boolean          default(FALSE)
+#  sunday_night        :boolean          default(FALSE)
+#  thursday_afternoon  :boolean          default(FALSE)
+#  thursday_morning    :boolean          default(FALSE)
+#  thursday_night      :boolean          default(FALSE)
+#  tuesday_afternoon   :boolean          default(FALSE)
+#  tuesday_morning     :boolean          default(FALSE)
+#  tuesday_night       :boolean          default(FALSE)
 #  walks_count         :integer          default(0)
+#  wednesday_afternoon :boolean          default(FALSE)
+#  wednesday_morning   :boolean          default(FALSE)
+#  wednesday_night     :boolean          default(FALSE)
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
+#  owner_id            :bigint           not null
+#
+# Indexes
+#
+#  index_dogs_on_owner_id  (owner_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (owner_id => users.id)
 #
 class Dog < ApplicationRecord
   belongs_to :owner
 
-  has_many :walks, class_name: "Walk", foreign_key: "dog_id"
+  has_many :walks, foreign_key: "dog_id"
+
+  validates :name, presence: true 
+  validates :size, presence: true
+  validates :about, presence: true
+  validates :neighborhood, presence: true
+  validates :image, presence: true
 end

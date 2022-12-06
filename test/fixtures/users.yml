@@ -3,39 +3,45 @@
 # Table name: users
 #
 #  id                     :bigint           not null, primary key
+#  bio                    :text
 #  email                  :citext           default(""), not null
 #  encrypted_password     :string           default(""), not null
-#  reset_password_token   :string
-#  reset_password_sent_at :datetime
-#  remember_created_at    :datetime
-#  username               :citext
-#  sunday_morning         :boolean
-#  sunday_afternoon       :boolean
-#  sunday_night           :boolean
-#  monday_morning         :boolean
-#  monday_afternoon       :boolean
-#  monday_night           :boolean
-#  tuesday_morning        :boolean
-#  tuesday_afternoon      :boolean
-#  tuesday_night          :boolean
-#  wednesday_morning      :boolean
-#  wednesday_afternoon    :boolean
-#  wednesday_night        :boolean
-#  thursday_morning       :boolean
-#  thursday_afternoon     :boolean
-#  thursday_night         :boolean
-#  friday_morning         :boolean
-#  friday_afternoon       :boolean
-#  friday_night           :boolean
-#  saturday_morning       :boolean
-#  saturday_afternoon     :boolean
-#  saturday_night         :boolean
-#  bio                    :text
+#  friday_afternoon       :boolean          default(FALSE)
+#  friday_morning         :boolean          default(FALSE)
+#  friday_night           :boolean          default(FALSE)
 #  image                  :string
+#  monday_afternoon       :boolean          default(FALSE)
+#  monday_morning         :boolean          default(FALSE)
+#  monday_night           :boolean          default(FALSE)
 #  neighborhood           :string
+#  remember_created_at    :datetime
+#  reset_password_sent_at :datetime
+#  reset_password_token   :string
+#  saturday_afternoon     :boolean          default(FALSE)
+#  saturday_morning       :boolean          default(FALSE)
+#  saturday_night         :boolean          default(FALSE)
+#  sunday_afternoon       :boolean          default(FALSE)
+#  sunday_morning         :boolean          default(FALSE)
+#  sunday_night           :boolean          default(FALSE)
+#  thursday_afternoon     :boolean          default(FALSE)
+#  thursday_morning       :boolean          default(FALSE)
+#  thursday_night         :boolean          default(FALSE)
+#  tuesday_afternoon      :boolean          default(FALSE)
+#  tuesday_morning        :boolean          default(FALSE)
+#  tuesday_night          :boolean          default(FALSE)
+#  username               :citext
 #  walks_count            :integer          default(0)
+#  wednesday_afternoon    :boolean          default(FALSE)
+#  wednesday_morning      :boolean          default(FALSE)
+#  wednesday_night        :boolean          default(FALSE)
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#
+# Indexes
+#
+#  index_users_on_email                 (email) UNIQUE
+#  index_users_on_reset_password_token  (reset_password_token) UNIQUE
+#  index_users_on_username              (username) UNIQUE
 #
 
 # This model initially had no columns defined. If you add columns to the

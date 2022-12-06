@@ -34,27 +34,27 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       # t.datetime :locked_at
 
       t.citext :username
-      t.boolean :sunday_morning
-      t.boolean :sunday_afternoon
-      t.boolean :sunday_night
-      t.boolean :monday_morning
-      t.boolean :monday_afternoon
-      t.boolean :monday_night
-      t.boolean :tuesday_morning
-      t.boolean :tuesday_afternoon
-      t.boolean :tuesday_night
-      t.boolean :wednesday_morning
-      t.boolean :wednesday_afternoon
-      t.boolean :wednesday_night
-      t.boolean :thursday_morning
-      t.boolean :thursday_afternoon
-      t.boolean :thursday_night
-      t.boolean :friday_morning
-      t.boolean :friday_afternoon
-      t.boolean :friday_night
-      t.boolean :saturday_morning
-      t.boolean :saturday_afternoon
-      t.boolean :saturday_night
+      t.boolean :sunday_morning, default: false
+      t.boolean :sunday_afternoon, default: false
+      t.boolean :sunday_night, default: false
+      t.boolean :monday_morning, default: false
+      t.boolean :monday_afternoon, default: false
+      t.boolean :monday_night, default: false
+      t.boolean :tuesday_morning, default: false
+      t.boolean :tuesday_afternoon, default: false
+      t.boolean :tuesday_night, default: false
+      t.boolean :wednesday_morning, default: false
+      t.boolean :wednesday_afternoon, default: false
+      t.boolean :wednesday_night, default: false
+      t.boolean :thursday_morning, default: false
+      t.boolean :thursday_afternoon, default: false
+      t.boolean :thursday_night, default: false
+      t.boolean :friday_morning, default: false
+      t.boolean :friday_afternoon, default: false
+      t.boolean :friday_night, default: false
+      t.boolean :saturday_morning, default: false
+      t.boolean :saturday_afternoon, default: false
+      t.boolean :saturday_night, default: false
       t.text :bio
       t.string :image
       t.string :neighborhood
