@@ -3,7 +3,7 @@
 # Table name: walks
 #
 #  id         :bigint           not null, primary key
-#  complete   :boolean
+#  status     :string           default("pending")
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  dog_id     :bigint           not null

@@ -58,4 +58,8 @@ class User < ApplicationRecord
          has_many :received_messages, class_name: "Message", foreign_key: "recipient_id"
 
          validates :username, presence: true, uniqueness: true
+
+         
+
+         scope :by_walks, -> { order(walks_count: :desc) }
 end

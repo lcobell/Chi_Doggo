@@ -104,7 +104,7 @@ ActiveRecord::Schema.define(version: 2022_12_06_181130) do
   create_table "walks", force: :cascade do |t|
     t.bigint "dog_id", null: false
     t.bigint "walker_id", null: false
-    t.boolean "complete"
+    t.string "status", default: "pending"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["dog_id"], name: "index_walks_on_dog_id"
