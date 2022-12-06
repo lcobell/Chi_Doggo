@@ -5,7 +5,7 @@ class CreateDogs < ActiveRecord::Migration[6.1]
       t.string :size
       t.text :about
       t.string :image
-      t.references :owner, null: false, foreign_key: { to_table: :users }
+      t.references :owner, null: false, foreign_key: { to_table: :users }, index: true
       t.boolean :sunday_morning
       t.boolean :sunday_afternoon
       t.boolean :sunday_night
