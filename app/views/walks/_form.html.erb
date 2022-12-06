@@ -22,8 +22,15 @@
   </div>
 
   <div class="field">
-    <%= form.label :complete %>
-    <%= form.check_box :complete %>
+    <%= form.label :pending %>
+    <%= form.radio_button :status, value: "pending" %>
+    <%= form.label :accepted %>
+    <%= form.radio_button :status, value: "accepted" %>
+    <%=form.label :rejected %>
+    <%= form.radio_button :status, value: "rejected" %>
+    <%= form.label :completed %>
+    <%= form.radio_button :status, value: "completed" %>
+    
   </div>
 
   <div class="actions">
