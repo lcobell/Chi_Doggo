@@ -12,7 +12,8 @@
 
 <p>
   <strong>Complete:</strong>
-  <%= @walk.complete %>
+  <%= @walk.completed? %>
+  <%#= @walk.status? %>
 </p>
 
 <%= link_to 'Edit', edit_walk_path(@walk) %> |

@@ -49,13 +49,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-         has_many :dogs, class_name: "Dog", foreign_key: :owner_id
+         has_many :dogs, class_name: "Dog", foreign_key: :owner_id, dependent: :destroy
 
-         has_many :walks, foreign_key: :walker_id
+         has_many :walks, foreign_key: :walker_id, dependent: :destroy
 
-         has_many :sent_messages, foreign_key: :sender_id, class_name: "Message"
+         has_many :sent_messages, foreign_key: :sender_id, class_name: "Message", dependent: :destroy
 
-         has_many :received_messages, foreign_key: :recipient_id, class_name: "Message"
+         has_many :received_messages, foreign_key: :recipient_id, class_name: "Message", dependent: :destroy
 
         #  validates :username, presence: true, uniqueness: true
 

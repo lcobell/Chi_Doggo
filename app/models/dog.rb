@@ -45,7 +45,7 @@
 class Dog < ApplicationRecord
   belongs_to :owner, foreign_key: { to_table: :users }, optional: :true
 
-  has_many :walks, foreign_key: :dog_id
+  has_many :walks, foreign_key: :dog_id, dependent: :destroy
 
   validates :name, presence: true 
   validates :size, presence: true
