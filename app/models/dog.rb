@@ -43,7 +43,7 @@
 #  fk_rails_...  (owner_id => users.id)
 #
 class Dog < ApplicationRecord
-  belongs_to :owner, foreign_key: { to_table: :users }
+  belongs_to :owner, foreign_key: { to_table: :users }, optional: :true
 
   has_many :walks, foreign_key: :dog_id
 
