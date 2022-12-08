@@ -21,6 +21,7 @@
 #
 class Walk < ApplicationRecord
   belongs_to :dog, counter_cache: true
+  # belongs_to :walker, foreign_key: :user_id, counter_cache: true, optional: :true
   belongs_to :walker, foreign_key: :user_id, counter_cache: true, optional: :true
 
   has_many :messages, foreign_key: :walk_id, dependent: :destroy
