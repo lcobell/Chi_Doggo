@@ -1,16 +1,30 @@
-<h1>
-  <%= @user.username %>
-</h1>
-<h2>Bio</h2>
-<p><%= @user.bio %></p>
+<div class="header">
+<h1>Welcome <%= current_user.username %> </h1>
 
-<h2>Neighborhood</h2>
-<h3><%= @user.neighborhood %></h3>
+</div>
+ <% current_user.dogs.each do |pups| %>
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+  
+     <div class="card-body">
+    
+  <img src="..." class="card-img-top" alt="...">
+ 
+    <h5 class="card-title"><%= pups.name  %></h5>
+    <p class="card-text"><%= pups.about %></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Size: <%= pups.size%></li>
+    <li class="list-group-item">Walks scheduled with Chi-Doggo: <%= pups.walks_count %></li>
+    <li class="list-group-item">Neighborhood: <%= pups.neighborhood %></li>
+    <li class="list-group-item">Owner: <%= pups.owner.username %>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
 
-<ul>
-  <% current_user.dogs.each do |pups| %>
-  <li>
-    <%= pups.name %>
-  </li>
+  
+</div>
   <% end %>
-</ul>
