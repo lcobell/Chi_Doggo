@@ -2,17 +2,18 @@
 
 <p>
   <strong>Dog:</strong>
-  <%= @walk.dog_id %>
+  <%= @walk.dog.name %>
 </p>
 
 <p>
   <strong>Walker:</strong>
-  <%= @walk.walker_id %>
+  <%= @walk.walker.username %>
 </p>
 
 <p>
   <strong>Complete:</strong>
-  <%= @walk.complete %>
+  <%#= @walk.completed? %>
+  <%= @walk.status %>
 </p>
 
 <%= link_to 'Edit', edit_walk_path(@walk) %> |

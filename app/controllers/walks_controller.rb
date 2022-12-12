@@ -65,6 +65,6 @@ class WalksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def walk_params
-      params.require(:walk).permit(:dog_id, :walker_id, :complete)
+      params.require(:walk).permit(:dog_id, :walker_id, :complete, :status)
     end
 end

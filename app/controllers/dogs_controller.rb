@@ -8,6 +8,7 @@ class DogsController < ApplicationController
 
   # GET /dogs/1 or /dogs/1.json
   def show
+    
   end
 
   # GET /dogs/new
@@ -22,6 +23,7 @@ class DogsController < ApplicationController
   # POST /dogs or /dogs.json
   def create
     @dog = Dog.new(dog_params)
+    
 
     respond_to do |format|
       if @dog.save

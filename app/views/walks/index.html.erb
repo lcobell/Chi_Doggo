@@ -15,9 +15,9 @@
   <tbody>
     <% @walks.each do |walk| %>
       <tr>
-        <td><%= walk.dog_id %></td>
-        <td><%= walk.walker_id %></td>
-        <td><%= walk.complete %></td>
+        <td><%= walk.dog.name %></td>
+        <td><%= walk.walker.username %></td>
+        <td><%= walk.status %></td>
         <td><%= link_to 'Show', walk %></td>
         <td><%= link_to 'Edit', edit_walk_path(walk) %></td>
         <td><%= link_to 'Destroy', walk, method: :delete, data: { confirm: 'Are you sure?' } %></td>

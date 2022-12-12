@@ -20,9 +20,10 @@
   <%= @dog.image %>
 </p>
 
+<%#= x = User.where(:id => :owner_id).at(0) %>
 <p>
   <strong>Owner:</strong>
-  <%= @dog.owner_id %>
+  <%= @dog.owner.username %>
 </p>
 
 <p>

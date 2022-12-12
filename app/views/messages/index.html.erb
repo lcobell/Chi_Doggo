@@ -16,8 +16,8 @@
   <tbody>
     <% @messages.each do |message| %>
       <tr>
-        <td><%= message.sender_id %></td>
-        <td><%= message.recipient_id %></td>
+        <td><%= message.sender.username %></td>
+        <td><%= message.recipient.username %></td>
         <td><%= message.content %></td>
         <td><%= message.walk_id %></td>
         <td><%= link_to 'Show', message %></td>

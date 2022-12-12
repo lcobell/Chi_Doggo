@@ -43,9 +43,12 @@
 #  fk_rails_...  (owner_id => users.id)
 #
 class Dog < ApplicationRecord
-  belongs_to :owner
+  # belongs_to :owner, foreign_key: { to_table: :users }, optional: :true
 
-  has_many :walks, foreign_key: "dog_id"
+  # belongs_to :owner, required: true, class_name: "User", foreign_key: "owner_id"
+  belongs_to :owner, required: true, class_name: "User"
+  # , foreign_key: { to_table: :users }
+  has_many :walks, foreign_key: :dog_id, dependent: :destroy
 
   validates :name, presence: true 
   validates :size, presence: true

@@ -25,7 +25,7 @@
 class Message < ApplicationRecord
   belongs_to :sender, class_name: "User"
   belongs_to :recipient, class_name: "User"
-  belongs_to :walk
+  belongs_to :walk, class_name: "Walk", foreign_key: :walk_id, optional: :true
 
   scope :past_week, -> { where(created_at: 1.week.ago...) }
 end
