@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
   root 'dogs#index'
+
+  get "/users/:id" => "users#show", as: :user
+
+  
+
   devise_for :users
   resources :dogs
   resources :messages
+  resources :users, only: [:show]
   resources :walks
   
   
