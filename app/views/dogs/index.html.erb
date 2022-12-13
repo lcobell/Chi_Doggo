@@ -1,13 +1,13 @@
 
 
 <h1>Canines of Chi-Doggo</h1>
-<%= @dogs.each do |pups| %>
+<% @dogs.each do |pups| %>
 <div class="row">
-  <div class="card border-primary mb-3 col-md-6 offset-md-3">
+  <div class="card bg-light border-primary mb-3 col-md-6 offset-md-3">
   
      <div class="card-body">
     
-  <img src="..." class="card-img-top" alt="...">
+  <img src="https://tse2.mm.bing.net/th?id=OIP.K5EdgEn0qvGCHQtA9SJsewHaE8&pid=Api&P=0" class="card-img-top" alt="...">
  
     <h5 class="card-title"><%= pups.name  %></h5>
     <p class="card-text"><%= pups.about %></p>
@@ -19,13 +19,12 @@
     <li class="list-group-item">Owner: <%= pups.owner.username %>
   </ul>
   <div class="card-body">
-    <%= link_to 'Edit ' + pups.name + "'s" + ' schedule' , edit_dog_path(pups.id) %>
+    <%= link_to 'View ' + pups.name + "'s" + ' schedule' , dog_path(pups.id) %>
     <%# <a href="#" class="card-link">Card link</a> %>
-    <%= link_to 'Remove ' + pups.name + ' from Chi-Doggo?', dog_path(pups.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%#= link_to 'Remove ' + pups.name + ' from Chi-Doggo?', dog_path(pups.id), method: :delete, data: { confirm: 'Are you sure?' } %>
     <%# <a href="#" class="card-link">Another link</a> %>
   </div>
 </div>
-
   
 </div>
   <% end %>

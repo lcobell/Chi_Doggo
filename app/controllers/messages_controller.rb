@@ -22,6 +22,7 @@ class MessagesController < ApplicationController
   # POST /messages or /messages.json
   def create
     @message = Message.new(message_params)
+   
 
     respond_to do |format|
       if @message.save
@@ -33,6 +34,7 @@ class MessagesController < ApplicationController
       end
     end
   end
+
 
   # PATCH/PUT /messages/1 or /messages/1.json
   def update
