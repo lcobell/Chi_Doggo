@@ -11,15 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :dog_id %>
-    <%= form.text_field :dog_id %>
-  </div>
+  <%= form.label :dog_id %>
+  <%= form.collection_select :dog_id, Dog.order(:name), :id, :name, include_blank: "Choose a dog!" %>
+
+
+
 
   <div class="field">
-    <%= form.label :walker_id %>
-    <%= form.text_field :walker_id %>
-  </div>
+    <label for="walker"></label>
+    <input type="hidden" name="walker" id="walker" value="<%=current_user.id%>" />
+
+    <%= form.hidden_field :walker, value: current_user.id %>
 
   <div class="field">
     <%= form.label :pending %>

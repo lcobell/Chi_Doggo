@@ -106,3 +106,8 @@ rails generate scaffold message sender:references recipient:references content:t
     <% end %>
   </tbody>
 </table>
+
+
+ <div class="field">
+    <%= form.label :sender_id %>
+    <%= form.text_field :sender_id   %>
