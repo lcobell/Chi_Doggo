@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   
 
   devise_for :users
-  resources :dogs
+  resources :dogs, shallow: true
   resources :messages
   resources :users, only: :show
   resources :walks

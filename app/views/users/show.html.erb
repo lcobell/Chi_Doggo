@@ -4,7 +4,7 @@
 </div>
  <% current_user.dogs.each do |pups| %>
 <div class="row">
-  <div class="col-md-6 offset-md-3">
+  <div class="card border-primary mb-3 col-md-6 offset-md-3">
   
      <div class="card-body">
     
@@ -20,8 +20,10 @@
     <li class="list-group-item">Owner: <%= pups.owner.username %>
   </ul>
   <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <%= link_to 'Edit ' + pups.name + "'s" + ' schedule' , edit_dog_path(pups.id) %>
+    <%# <a href="#" class="card-link">Card link</a> %>
+    <%= link_to 'Remove ' + pups.name + ' from Chi-Doggo?', dog_path(pups.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%# <a href="#" class="card-link">Another link</a> %>
   </div>
 </div>
 

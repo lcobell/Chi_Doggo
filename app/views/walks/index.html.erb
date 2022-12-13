@@ -42,7 +42,7 @@
   </thead>
 
   <tbody>
-  <h4><%= current_user.username%>'s Scheduled Walks</h4>
+  <h4><%= current_user.username%>'s Dogs Walks</h4>
     <% @walks.each do |walk| %>
 
     <% if walk.dog.owner_id == current_user.id %>
