@@ -17,11 +17,9 @@
 
 
 
-  <div class="field">
-    <label for="walker"></label>
-    <input type="hidden" name="walker" id="walker" value="<%=current_user.id%>" />
 
-    <%= form.hidden_field :walker, value: current_user.id %>
+
+    <%= form.hidden_field :walker_id, value: current_user.id %>
 
   <div class="field">
     <%= form.label :pending %>

@@ -111,3 +111,8 @@ rails generate scaffold message sender:references recipient:references content:t
  <div class="field">
     <%= form.label :sender_id %>
     <%= form.text_field :sender_id   %>
+
+
+  <div class="field">
+    <label for="walker"></label>
+    <input type="hidden" name="walker" id="walker" value="<%=current_user.id%>" />
