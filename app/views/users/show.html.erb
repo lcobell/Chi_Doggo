@@ -8,21 +8,21 @@
   
      <div class="card-body">
     
-  <img src="https://tse4.mm.bing.net/th?id=OIP.zwA43Z55zEeorXk0URYk5AHaIE&pid=Api&P=0" class="card-img-top" alt="...">
+  <img src="<%= pups.image %>" class="card-img-top" alt="...">
  
     <h5 class="card-title"><%= pups.name  %></h5>
     <p class="card-text"><%= pups.about %></p>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Size: <%= pups.size%></li>
-    <li class="list-group-item">Walks scheduled with Chi-Doggo: <%= pups.walks_count %></li>
+    <li class="list-group-item">Walks on the WalkChain: <%= pups.walks_count %></li>
     <li class="list-group-item">Neighborhood: <%= pups.neighborhood %></li>
     <li class="list-group-item">Owner: <%= pups.owner.username %>
   </ul>
   <div class="card-body">
     <%= link_to 'Edit ' + pups.name + "'s" + ' schedule' , edit_dog_path(pups.id) %>
     <%# <a href="#" class="card-link">Card link</a> %>
-    <%= link_to 'Remove ' + pups.name + ' from Chi-Doggo?', dog_path(pups.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Remove ' + pups.name + ' from the WalkChain?', dog_path(pups.id), method: :delete, data: { confirm: 'Are you sure?' } %>
     <%# <a href="#" class="card-link">Another link</a> %>
   </div>
 </div>

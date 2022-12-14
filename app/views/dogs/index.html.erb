@@ -1,6 +1,6 @@
 
 
-<h1>Canines of Chi-Doggo</h1>
+<h1>Dogs on the WalkChain</h1>
 <% @dogs.each do |pups| %>
 <div class="row">
   <div class="card bg-light border-primary mb-3 col-md-6 offset-md-3">
@@ -14,7 +14,7 @@
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Size: <%= pups.size%></li>
-    <li class="list-group-item">Walks scheduled with Chi-Doggo: <%= pups.walks_count %></li>
+    <li class="list-group-item">Walks on the WalkChain: <%= pups.walks_count %></li>
     <li class="list-group-item">Neighborhood: <%= pups.neighborhood %></li>
     <li class="list-group-item">Owner: <%= pups.owner.username %>
   </ul>
