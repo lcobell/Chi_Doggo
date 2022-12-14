@@ -2,12 +2,12 @@
 
 <h1>Walks</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Dog</th>
       <th>Walker</th>
-      <th>Complete</th>
+      <th>Status</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,9 +21,9 @@
         <td><%= walk.dog.name %></td>
         <td><%= walk.walker.username %></td>
         <td><%= walk.status %></td>
-        <td><%= link_to 'Show', walk %></td>
-        <td><%= link_to 'Edit', edit_walk_path(walk) %></td>
-        <td><%= link_to 'Destroy', walk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        <td><%= link_to 'Update Walk Status', edit_walk_path(walk) %></td>
+        <td><%= link_to 'Delete', walk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
     <% end %>
@@ -31,7 +31,7 @@
 </table>
 <hr>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Dog</th>
@@ -50,9 +50,9 @@
         <td><%= walk.dog.name %></td>
         <td><%= walk.walker.username %></td>
         <td><%= walk.status %></td>
-        <td><%= link_to 'Show', walk %></td>
-        <td><%= link_to 'Edit', edit_walk_path(walk) %></td>
-        <td><%= link_to 'Destroy', walk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       
+        <td><%= link_to 'Update Walk Status', edit_walk_path(walk) %></td>
+        <td><%= link_to 'Delete', walk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
     <% end %>

@@ -26,120 +26,58 @@
   <%= @dog.owner.username %>
 </p>
 
-<p>
-  <strong>Sunday morning:</strong>
-  <%= @dog.sunday_morning %>
-</p>
+<table class="table table-bordered border-primary">
+    <thead>
+    <tr>
+      <th>Time of Day</th>
+      <th>Sunday</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+      <th>Saturday</th>
+      <%# <th colspan="3"></th> %>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <th scope="row">Morning</th>
+    <td><%= @dog.sunday_morning %></td>
+    <td><%= @dog.monday_morning%></td>
+    <td><%= @dog.tuesday_morning %></td>
+    <td><%= @dog.wednesday_morning %></td>
+    <td><%= @dog.thursday_morning%></td>
+    <td><%= @dog.friday_morning %></td>
+    <td><%= @dog.saturday_morning %></td>
+    <tr>
 
-<p>
-  <strong>Sunday afternoon:</strong>
-  <%= @dog.sunday_afternoon %>
-</p>
+     <th scope="row">Afternoon</th>
+    <td><%= @dog.sunday_afternoon %></td>
+    <td><%= @dog.monday_afternoon%></td>
+    <td><%= @dog.tuesday_afternoon %></td>
+    <td><%= @dog.wednesday_afternoon %></td>
+    <td><%= @dog.thursday_afternoon%></td>
+    <td><%= @dog.friday_afternoon %></td>
+    <td><%= @dog.saturday_afternoon %></td>
+    </tr>
+  
+    <tr>
+     <th scope="row">Afternoon</th>
+    <td><%= @dog.sunday_night %></td>
+    <td><%= @dog.monday_night%></td>
+    <td><%= @dog.tuesday_night %></td>
+    <td><%= @dog.wednesday_night %></td>
+    <td><%= @dog.thursday_night %></td>
+    <td><%= @dog.friday_night %></td>
+    <td><%= @dog.saturday_night %></td>
+    </tr>
 
-<p>
-  <strong>Sunday night:</strong>
-  <%= @dog.sunday_night %>
-</p>
+    
+  </tbody>
+</table>
 
-<p>
-  <strong>Monday morning:</strong>
-  <%= @dog.monday_morning %>
-</p>
 
-<p>
-  <strong>Monday afternoon:</strong>
-  <%= @dog.monday_afternoon %>
-</p>
-
-<p>
-  <strong>Monday night:</strong>
-  <%= @dog.monday_night %>
-</p>
-
-<p>
-  <strong>Tuesday morning:</strong>
-  <%= @dog.tuesday_morning %>
-</p>
-
-<p>
-  <strong>Tuesday afternoon:</strong>
-  <%= @dog.tuesday_afternoon %>
-</p>
-
-<p>
-  <strong>Tuesday night:</strong>
-  <%= @dog.tuesday_night %>
-</p>
-
-<p>
-  <strong>Wednesday morning:</strong>
-  <%= @dog.wednesday_morning %>
-</p>
-
-<p>
-  <strong>Wednesday afternoon:</strong>
-  <%= @dog.wednesday_afternoon %>
-</p>
-
-<p>
-  <strong>Wednesday night:</strong>
-  <%= @dog.wednesday_night %>
-</p>
-
-<p>
-  <strong>Thursday morning:</strong>
-  <%= @dog.thursday_morning %>
-</p>
-
-<p>
-  <strong>Thursday afternoon:</strong>
-  <%= @dog.thursday_afternoon %>
-</p>
-
-<p>
-  <strong>Thursday night:</strong>
-  <%= @dog.thursday_night %>
-</p>
-
-<p>
-  <strong>Friday morning:</strong>
-  <%= @dog.friday_morning %>
-</p>
-
-<p>
-  <strong>Friday afternoon:</strong>
-  <%= @dog.friday_afternoon %>
-</p>
-
-<p>
-  <strong>Friday night:</strong>
-  <%= @dog.friday_night %>
-</p>
-
-<p>
-  <strong>Saturday morning:</strong>
-  <%= @dog.saturday_morning %>
-</p>
-
-<p>
-  <strong>Saturday afternoon:</strong>
-  <%= @dog.saturday_afternoon %>
-</p>
-
-<p>
-  <strong>Saturday night:</strong>
-  <%= @dog.saturday_night %>
-</p>
-
-<p>
-  <strong>Neighborhood:</strong>
-  <%= @dog.neighborhood %>
-</p>
-
-<p>
-  <strong>Walks count:</strong>
-  <%= @dog.walks_count %>
-</p>
 
 <%= link_to 'Edit', edit_dog_path(@dog) %> |
 <%= link_to 'Back', dogs_path %>
