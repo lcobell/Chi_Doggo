@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :dogs, shallow: true
   resources :messages
-  resources :users, only: :show
+  resources :users
+  # only: :show 
   resources :walks
   
   # get "/users/:id" => "users#show", as: :user

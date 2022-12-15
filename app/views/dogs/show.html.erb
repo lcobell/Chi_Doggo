@@ -43,34 +43,34 @@
   <tbody>
   <tr>
   <th scope="row">Morning</th>
-    <td><%= @dog.sunday_morning %></td>
-    <td><%= @dog.monday_morning%></td>
-    <td><%= @dog.tuesday_morning %></td>
-    <td><%= @dog.wednesday_morning %></td>
-    <td><%= @dog.thursday_morning%></td>
-    <td><%= @dog.friday_morning %></td>
-    <td><%= @dog.saturday_morning %></td>
+    <td><%= humanize_boolean(@dog.sunday_morning) %></td>
+    <td><%= humanize_boolean(@dog.monday_morning)%></td>
+    <td><%= humanize_boolean(@dog.tuesday_morning) %></td>
+    <td><%= humanize_boolean(@dog.wednesday_morning) %></td>
+    <td><%= humanize_boolean(@dog.thursday_morning)%></td>
+    <td><%= humanize_boolean(@dog.friday_morning) %></td>
+    <td><%= humanize_boolean(@dog.saturday_morning) %></td>
     <tr>
 
      <th scope="row">Afternoon</th>
-    <td><%= @dog.sunday_afternoon %></td>
-    <td><%= @dog.monday_afternoon%></td>
-    <td><%= @dog.tuesday_afternoon %></td>
-    <td><%= @dog.wednesday_afternoon %></td>
-    <td><%= @dog.thursday_afternoon%></td>
-    <td><%= @dog.friday_afternoon %></td>
-    <td><%= @dog.saturday_afternoon %></td>
+    <td><%= humanize_boolean(@dog.sunday_afternoon) %></td>
+    <td><%= humanize_boolean(@dog.monday_afternoon)%></td>
+    <td><%= humanize_boolean(@dog.tuesday_afternoon) %></td>
+    <td><%= humanize_boolean(@dog.wednesday_afternoon) %></td>
+    <td><%= humanize_boolean(@dog.thursday_afternoon)%></td>
+    <td><%= humanize_boolean(@dog.friday_afternoon) %></td>
+    <td><%= humanize_boolean(@dog.saturday_afternoon) %></td>
     </tr>
   
     <tr>
      <th scope="row">Afternoon</th>
-    <td><%= @dog.sunday_night %></td>
-    <td><%= @dog.monday_night%></td>
-    <td><%= @dog.tuesday_night %></td>
-    <td><%= @dog.wednesday_night %></td>
-    <td><%= @dog.thursday_night %></td>
-    <td><%= @dog.friday_night %></td>
-    <td><%= @dog.saturday_night %></td>
+    <td><%= humanize_boolean(@dog.sunday_night) %></td>
+    <td><%= humanize_boolean(@dog.monday_night)%></td>
+    <td><%= humanize_boolean(@dog.tuesday_night) %></td>
+    <td><%= humanize_boolean(@dog.wednesday_night) %></td>
+    <td><%= humanize_boolean(@dog.thursday_night) %></td>
+    <td><%= humanize_boolean(@dog.friday_night) %></td>
+    <td><%= humanize_boolean(@dog.saturday_night) %></td>
     </tr>
 
     
