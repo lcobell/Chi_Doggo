@@ -1,6 +1,7 @@
 
 
 <h1>Dogs on the WalkChain</h1>
+<%= link_to 'Add your dog!', new_dog_path %>
 <% @dogs.each do |pups| %>
 <div class="row">
   <div class="card bg-light border-primary mb-3 col-md-6 offset-md-3">
@@ -32,4 +33,4 @@
 
 <br>
 
-<%= link_to 'New Dog', new_dog_path %>
+<%= link_to 'Add Your Dog', new_dog_path %>
