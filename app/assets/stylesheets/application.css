@@ -20,10 +20,12 @@ body {
 .card {
   background-color:  #75E6DA;
   border-radius: 15px;
+  border-width: 0;
 }
 
 .list-group-item {
   background-color: #D4F1F4;
+  
 }
 
 .navbar {
