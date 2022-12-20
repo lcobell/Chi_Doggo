@@ -11,10 +11,12 @@
 </p>
 
 <p>
-  <strong>Complete:</strong>
-  <%#= @walk.completed? %>
+  <strong>This walk is:</strong>
+ 
   <%= @walk.status %>
 </p>
+
+<p>Send <%= @walk.dog.owner.username %> a <%= link_to 'message', messages_url %> </p>
 
 <%= link_to 'Edit', edit_walk_path(@walk) %> |
 <%= link_to 'Back', walks_path %>

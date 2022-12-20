@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background-color: #D4F1F4;
+}
+
+.card {
+  background-color:  #75E6DA;
+  border-radius: 15px;
+}
+
+.list-group-item {
+  background-color: #D4F1F4;
+}
+
+.navbar {
+  background-color: #75E6DA;
+}
+
+.table {
+  background-color: #75E6DA;
+}
+
+.dropdown-item, .dropdown-menu {
+  background-color: #D4F1F4;
+  border-radius: 0;
+}
